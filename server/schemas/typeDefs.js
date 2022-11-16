@@ -19,6 +19,9 @@ const typeDefs = gql`
         bookCount: Int
         savedBooks: [Book]        
     }
+    type Query {
+        me: User
+    }
     
 `;
 
