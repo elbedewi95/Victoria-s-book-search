@@ -13,6 +13,14 @@ const SavedBooks = () => {
   const [deleteBook] = useMutation(REMOVE_BOOK);
   const userData = data?.me || {};
 
+  if(!userData?.username) {
+    return (
+      <h4>
+        You need to be logged in to see this page.
+      </h4>
+    );
+  }
+
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING...</h2>;
